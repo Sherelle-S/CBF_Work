@@ -77,28 +77,23 @@ public class FlowControlExercises {
         //      {"SumOfEvens", calculatedSumOfEvens}, {"SumOfOdds", calculatedSumOfOdds}
         // throw new RuntimeException("Not implemented");
         
-        // create arrayList of odd and even numbers
-        List<Integer> oddArray = new ArrayList<Integer>();
-        List<Integer> evenArray = new ArrayList<Integer>();
+        // create arrayList fro 1 to 100
+        List<Integer> numberArray = new ArrayList<Integer>();
         
         for(int i = 1; i <= 100; i++){
-            if(i % 2 == 0){
-                evenArray.add(i);
-            }else{
-                oddArray.add(i);
-            }
+            numberArray.add(i);
         }
 
-        // iterate throught the array lists to get the sum of each array
-        int calculatedSumOfOdds = 0;
+        // create sums to total odd and even numbers. iterate through array to total the numbers
+         int calculatedSumOfOdds = 0;
         int calculatedSumOfEvens = 0;
-        
-        for(int x : oddArray){
-            calculatedSumOfOdds += x;
-        }
 
-        for (int y : evenArray){
-            calculatedSumOfEvens += y;
+        for(int i = 0; i < numberArray.size(); i++){
+            if (numberArray.get(i) % 2 == 0){
+                calculatedSumOfEvens += numberArray.get(i);
+            }else{
+                calculatedSumOfOdds += numberArray.get(i);
+            }
         }
 
         // create a map
@@ -106,40 +101,10 @@ public class FlowControlExercises {
        
         calculatedSumMap.put("SumOfOdds", calculatedSumOfOdds);
         calculatedSumMap.put("SumOfEvens", calculatedSumOfEvens);
-//  i: calculatedSumMap.keySet()){
-            // return  calculatedSumMap.getKey() + "," + calculatedSumMap.getValue(i);
-        //  for(Map.Entry<String, Integer> iterable : calculatedSumMap.entrySet());
+
          return calculatedSumMap;
         } 
         
-    
-
-//             calculatedSumMap.put(, Integer.parseInt(getName(calculatedSumOfEvens)));
-//             calculatedSumMap.put("SumOfOdds", Integer.parseInt(getName(calculatedSumOfOdds)));
-
-//            
-        // List<Integer> nums = new ArrayList<Integer>();
-        // int calculatedSumOfOdds = 0;
-        // int calculatedSumOfEvens = 0;
-        // for(int i = 0; i <= 100; i++){
-        //     nums.add(i);
-        // }
-        // for(int i = 0; i < nums.size(); i++){
-        //     if(nums.get(i) % 2 == 0){
-        //         calculatedSumOfEvens += nums.get(i);
-        //     }else{
-        //         calculatedSumOfOdds += nums.get(i);
-        //     }
-        // }
-        // return calculatedSumOfOdds;
-        // return calculatedSumOfEvens;
-        // Map<String, Integer> myMap = new HashMap<>();
-        // myMap.put("SumOfEvens", calculatedSumOfEvens);
-        // myMap.put("SumOfOdds", calculatedSumOfOdds);
-
-        // return myMap;
-
-    // }
 
     public List<Integer> reverse(ArrayList<Integer> numbers) {
         // TODO - Implement this method such that
