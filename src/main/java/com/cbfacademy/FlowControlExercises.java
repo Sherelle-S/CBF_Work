@@ -1,6 +1,7 @@
 package com.cbfacademy;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -17,7 +18,7 @@ public class FlowControlExercises {
         //  - it returns the constructed list
         // throw new RuntimeException("Not implemented");
         List<String> fizzyBList = new ArrayList<>();
-        for(int i = 0; i <= numbers.size(); i++){
+        for(int i = 0; i < numbers.size(); i++){
             if(numbers.get(i) % 3 == 0 && numbers.get(i) % 5 == 0){
                 fizzyBList.add("FizzBuzz");
             }else if(numbers.get(i) % 3 == 0){
@@ -25,39 +26,11 @@ public class FlowControlExercises {
             }else if(numbers.get(i) % 5 == 0){
                 fizzyBList.add("Buzz");
             }else{
-                fizzyBList.add(Integer.toString(i));
+                fizzyBList.add(Integer.toString(numbers.get(i)));
             }
         }
         return fizzyBList;
-    //     List<String> fizzyList = new ArrayList<>();
-    //     for(int i = 1; i <= numbers.size(); i++){
-    //         if(i % 3 == 0 && i % 5 == 0){
-    //             fizzyList.add("FizzBuzz");
-    //         }else if(i % 3 == 0){
-    //             fizzyList.add("Fizz");
-    //         }else if(i % 5 == 0){
-    //             fizzyList.add("Buzz");
-    //         }else{
-    //             fizzyList.add(Integer.toString(i));
-    //         }
-    //     }
-    //      return fizzyList;
-    // }
-
-    //  List<String> fizzyList = new ArrayList<>();
-    //     for(int i = 1; i <= numbers.size(); i++){
-    //         Integer el = numbers.get(i);
-    //         if(el % 3 == 0 && el % 5 == 0){
-    //             fizzyList.add("FizzBuzz");
-    //         }else if(el % 3 == 0){
-    //             fizzyList.add("Fizz");
-    //         }else if(el % 5 == 0){
-    //             fizzyList.add("Buzz");
-    //         }else{
-    //             fizzyList.add(el.toString(i));
-    //         }
-    //     }
-    //      return fizzyList;
+    
     }
 
     public String whichMonth(Integer number) {
@@ -102,7 +75,49 @@ public class FlowControlExercises {
         //  - determines the sum of all the odd numbers in the list
         //  - returns a map with two entries:
         //      {"SumOfEvens", calculatedSumOfEvens}, {"SumOfOdds", calculatedSumOfOdds}
-        throw new RuntimeException("Not implemented");
+        // throw new RuntimeException("Not implemented");
+        
+        // create arrayList of odd and even numbers
+        List<Integer> oddArray = new ArrayList<Integer>();
+        List<Integer> evenArray = new ArrayList<Integer>();
+        
+        for(int i = 1; i <= 100; i++){
+            if(i % 2 == 0){
+                evenArray.add(i);
+            }else{
+                oddArray.add(i);
+            }
+        }
+
+        // iterate throught the array lists to get the sum of each array
+        int calculatedSumOfOdds = 0;
+        int calculatedSumOfEvens = 0;
+        
+        for(int x : oddArray){
+            calculatedSumOfOdds += x;
+        }
+
+        for (int y : evenArray){
+            calculatedSumOfEvens += y;
+        }
+
+        // create a map
+        Map<String, Integer>calculatedSumMap  = new HashMap<String, Integer>();
+       
+        calculatedSumMap.put("SumOfOdds", calculatedSumOfOdds);
+        calculatedSumMap.put("SumOfEvens", calculatedSumOfEvens);
+//  i: calculatedSumMap.keySet()){
+            // return  calculatedSumMap.getKey() + "," + calculatedSumMap.getValue(i);
+        //  for(Map.Entry<String, Integer> iterable : calculatedSumMap.entrySet());
+         return calculatedSumMap;
+        } 
+        
+    
+
+//             calculatedSumMap.put(, Integer.parseInt(getName(calculatedSumOfEvens)));
+//             calculatedSumMap.put("SumOfOdds", Integer.parseInt(getName(calculatedSumOfOdds)));
+
+//            
         // List<Integer> nums = new ArrayList<Integer>();
         // int calculatedSumOfOdds = 0;
         // int calculatedSumOfEvens = 0;
@@ -124,13 +139,19 @@ public class FlowControlExercises {
 
         // return myMap;
 
-    }
+    // }
 
     public List<Integer> reverse(ArrayList<Integer> numbers) {
         // TODO - Implement this method such that
         //  - it takes an array list of integers
         //  - it returns the list in reverse order
-        throw new RuntimeException("Not implemented");
+        // throw new RuntimeException("Not implemented");
+        ArrayList<Integer>reversedList = new ArrayList<Integer>();
+        for(int i = 0; i < numbers.size(); i++){
+            reversedList.add(numbers.get(i));
+        }
+        Collections.reverse(reversedList);
+        return reversedList;
     }
 
     public String getName() {
