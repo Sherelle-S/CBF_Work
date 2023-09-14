@@ -144,4 +144,4 @@ Your implementation is correct when all tests pass:
 [3]: https://junit.org/junit5/
 [4]: https://maven.apache.org/
 [5]: https://github.com/cbfacademy/intro-to-java-course/blob/main/exercises/flow-control/src/main/java/com/cbfacademy/FlowControlExercises.java
-[6]: https://github.com/cbfacademy/intro-to-java-course/blob/main/exercises/flow-control/src/test/java/com/cbfacademy/FlowControlExercisesTest.java# CBF_Work
+[6]: https://github.com/cbfacademy/intro-to-java-course/blob/main/exercises/flow-control/src/test/java/com/cbfacademy/FlowControlExercisesTest.java
